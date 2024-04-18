@@ -1,0 +1,98 @@
+@font-face {
+    font-family: Questrial;
+    src: url('assets/fonts/Questrial/Questrial-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: Quicksand;
+    src: url('assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: Raleway;
+    src: url('assets/fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: Raleway-Italic;
+    src: url('assets/fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-size: 1vw;
+  }
+
+.navbar{
+    background-color: #60D7A0;
+    padding:1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#name-wrapper{
+  grid-column: 1;
+}
+#name-header{
+    font-family: Raleway;
+    font-weight: 800;
+    font-size: 1.7rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #C5FFE4;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+#name-subtitle{
+    font-family: Questrial;
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+    color: #C5FFE4;
+}
+#nav-wrapper{
+    font-family: Questrial;
+    font-size: 1rem;
+    color: white;
+    text-transform: lowercase;
+    grid-column: 2/4;
+}
+#nav-wrapper ul{
+    float:right;
+}
+a .navlink{
+    color: white;
+    text-decoration: none;
+}
+.navlink{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.navlink:hover{
+    cursor: pointer;
+    color: black;
+    text-decoration: underline dotted;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    transition: 500ms;
+}
+
+.navlink:hover ::after{
+    content: ' >>';
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#main{
+    background-image: url("assets/img/bg_temp.png");
+    background-size: cover;
+    background-repeat: none;
+}
