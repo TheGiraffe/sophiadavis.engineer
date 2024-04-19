@@ -28,23 +28,36 @@ body{
 
 .navbar{
     background-color: #60D7A0;
-    padding:1em;
+    padding:0.6rem;
+    position: fixed;
+    width: inherit;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    top:0;
+    z-index: 999;
 }
 
 #name-wrapper{
   grid-column: 1;
+  padding-left: 0.4rem;
 }
-#name-header{
+#name-header a{
     font-family: Raleway;
     font-weight: 800;
     font-size: 1.7rem;
+    text-decoration: none;
     text-shadow: 0.1rem 0.1rem 0.1rem #C5FFE4;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
+#name-header a:hover{
+    cursor: pointer;
+    text-shadow: 0.15rem 0.15rem 0.1rem #C5FFE4;
+    transition: 250ms ease-in-out;
+    letter-spacing: 0.15rem;
+}
+
 #name-subtitle{
     font-family: Questrial;
     font-size: 0.7rem;
@@ -54,6 +67,7 @@ body{
 #nav-wrapper{
     font-family: Questrial;
     font-size: 1rem;
+    padding-right: 1rem;
     color: white;
     text-transform: lowercase;
     grid-column: 2/4;
@@ -78,7 +92,7 @@ a .navlink{
     text-decoration: underline dotted;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
-    transition: 500ms;
+    transition: 500ms ease-in-out;
 }
 
 .navlink:hover ::after{
@@ -87,7 +101,7 @@ a .navlink{
 
 section{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: block;
 }
 
@@ -95,4 +109,94 @@ section{
     background-image: url("assets/img/bg_temp.png");
     background-size: cover;
     background-repeat: none;
+    -webkit-mask-image: linear-gradient(to bottom, black 98%, rgba(0,0,0,0.1) 100%);
+    mask-image: linear-gradient(to bottom, black 98%, rgba(0,0,0,0.1) 100%);
+}
+#projects{
+    background-image: url("assets/img/projects_bg3.png");
+    background-size: cover;
+    background-repeat: none;
+    -webkit-mask-image: linear-gradient(to top, black 98%, rgba(0,0,0,0.1) 100%);
+    mask-image: linear-gradient(to top, black 98%, rgba(0,0,0,0.1) 100%);
+}
+#featured-projects-container{
+    position: fixed;
+    top:4rem;
+    width: 90%;
+    height: 85%;
+    margin: 5%;
+    margin-top:1%;
+}
+#featured-projects-h1{
+    font-family: Raleway;
+    font-weight: 800;
+    font-size: 2rem;
+    text-decoration: none;
+    text-shadow: -0.15rem -0.1rem white;
+    color: #165043;
+    text-transform: uppercase;
+    letter-spacing: 0.09rem;
+}
+
+#career-education{
+    background-image: linear-gradient(#77d196, #C5FFE4);
+    padding-top: 1rem;
+}
+
+#career-education-container{
+    margin:2%;
+    margin-top:5%;
+}
+#career-education-h1{
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 4rem;
+    text-decoration: none;
+    -webkit-text-stroke: 0.15rem #165043;
+    text-stroke: 0.15rem #165043;
+    color: #e5ff71;
+    text-shadow: -0.2rem -0.2rem #e5ff71;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+#volunteering{
+    background-image: linear-gradient(#C5FFE4,white);
+}
+#hobbies{
+    background-color: white;
+}
+#links-more{
+    background-image: url("assets/img/bg_lastpage.png");
+    background-size: cover;
+    background-repeat: none;
+    -webkit-mask-image: linear-gradient(to top, black 98%, rgba(0,0,0,0.1) 100%);
+    mask-image: linear-gradient(to top, black 98%, rgba(0,0,0,0.1) 100%);
+}
+
+footer{
+    background-color: #bbfadd;
+    font-family: Questrial;
+    padding: 0.5rem;
+    position: fixed;
+    width: inherit;
+    bottom: 0;
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    z-index: 998;
+}
+#copyright{
+    grid-column: 1;
+    padding-left: 0.5rem;
+    font-size:0.7rem;
+}
+#socials{
+    grid-column: 2;
+}
+#contact{
+    grid-column: 3;
+    font-size:0.7rem;
+    text-align:right;
+    padding-right: 2rem;
 }
